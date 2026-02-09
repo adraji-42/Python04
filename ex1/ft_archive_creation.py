@@ -15,11 +15,13 @@ def create_new_archive(filename: str = "new_discovery.txt") -> None:
             "Archived by Data Archivist trainee"
         ]
 
-        for i, content in enumerate(entries, 1):
+        i = 1
+        for content in entries:
             entry_line = f"[ENTRY {i:03}] {content}\n"
 
             vault.write(entry_line)
             print(entry_line.strip())
+            i += 1
     except Exception as e:
         print(f"ERROR: An unexpected anomaly occurred: {e}")
     finally:
