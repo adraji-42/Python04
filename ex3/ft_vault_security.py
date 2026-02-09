@@ -28,13 +28,4 @@ def main(filename: str) -> None:
 
 
 if __name__ == "__main__":
-    filename = "vault.txt"
-
-    try:
-        with open(filename, "w") as vault:
-            vault.write("[CLASSIFIED] Quantum encryption keys recovered\n")
-            vault.write("[CLASSIFIED] Archive integrity: 100%\n")
-
-        main(filename)
-    except Exception as e:
-        print(f"ERROR: An unexpected anomaly occurred: {e}")
+    main("vault.txt")

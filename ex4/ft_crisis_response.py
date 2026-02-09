@@ -27,6 +27,7 @@ def main() -> None:
             handle_crisis(file)
         except Exception as e:
             print(f"ERROR: An unexpected anomaly occurred: {e}")
+    print()
 
     for file in routine_files:
         try:
