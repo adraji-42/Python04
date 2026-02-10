@@ -8,12 +8,14 @@ def recover_ancient_data(filename: str = "ancient_fragment.txt") -> None:
     print("Connection established...\n")
 
     try:
-        content = vault.readlines()
+        content = vault.read()
 
         print("RECOVERED DATA:")
 
-        for line in content:
-            print(line.strip())
+        i = 1
+        for line in content.split('\n'):
+            print(f"[FRAGMENT {i:03}] '{line.strip()}'")
+            i += 1
 
         print("\nData recovery complete. ", end="")
     except Exception as e:
